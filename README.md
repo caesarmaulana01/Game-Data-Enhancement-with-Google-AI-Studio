@@ -34,13 +34,12 @@ This command will read the requirements.txt file and install all the listed libr
 To configure API Key you can set your API key as an environment variable in your operating system.
 
 - **On Linux/macOS**: Open your terminal and run the following command (replace YOUR_ACTUAL_API_KEY with your key):
-    Bash
 
-```bash
-export GOOGLE_API_KEY="YOUR_ACTUAL_API_KEY"
-```
+    ```bash
+    export GOOGLE_API_KEY="YOUR_ACTUAL_API_KEY"
+    ```
 
-To make this permanent for future terminal sessions, you can add this line to your shell configuration file (e.g., .bashrc, .zshrc).
+    To make this permanent for future terminal sessions, you can add this line to your shell configuration file (e.g., .bashrc, .zshrc).
 
 - **On Windows (Command Prompt)**: Open Command Prompt and run:
 
