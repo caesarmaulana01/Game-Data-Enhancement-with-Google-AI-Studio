@@ -33,45 +33,44 @@ This command will read the requirements.txt file and install all the listed libr
 
 To configure API Key you can set your API key as an environment variable in your operating system.
 
-- **On Linux/macOS**: Open your terminal and run the following command (replace YOUR_ACTUAL_API_KEY with your key):
+- **On Linux/macOS**: Open your terminal and run the following command (replace `YOUR_ACTUAL_API_KEY` with your key):
 
     ```bash
     export GOOGLE_API_KEY="YOUR_ACTUAL_API_KEY"
     ```
 
-    To make this permanent for future terminal sessions, you can add this line to your shell configuration file (e.g., .bashrc, .zshrc).
+    To make this permanent for future terminal sessions, you can add this line to your shell configuration file (e.g., `.bashrc`, .`zshrc`).
 
 - **On Windows (Command Prompt)**: Open Command Prompt and run:
 
-```bash
-set GOOGLE_API_KEY="YOUR_ACTUAL_API_KEY"
-```
+    ```bash
+    set GOOGLE_API_KEY="YOUR_ACTUAL_API_KEY"
+    ```
 
-This will only apply to the current Command Prompt session. To make it permanent, use the "Environment Variables" settings in System Properties.
+    This will only apply to the current Command Prompt session. To make it permanent, use the "Environment Variables" settings in System Properties.
 
 - **On Windows (PowerShell)**: Open PowerShell and run:
-```bash
-$env:GOOGLE_API_KEY = "YOUR_ACTUAL_API_KEY"
-```
+    ```bash
+    $env:GOOGLE_API_KEY = "YOUR_ACTUAL_API_KEY"
+    ```
 
-To make it permanent, you might need to modify your system's environment settings.
+    To make it permanent, you might need to modify your system's environment settings.
 
-Ensure that your enhance_games.py script is configured to read the API key from environment variables if you choose this method.
+    Ensure that your `enhance_games.py` script is configured to read the API key from environment variables if you choose this method.
 
 ### 3. Prepare the Game Data CSV File
 
-Make sure you have a CSV file containing the list of game titles. By default, the script looks for a file named Game Thumbnail.csv in the same directory as the script. If your CSV file has a different name or is located elsewhere, you need to modify the following line in the enhance_games.py script accordingly:
-Python
+Make sure you have a CSV file containing the list of game titles. By default, the script looks for a file named `Game Thumbnail.csv` in the same directory as the script. If your CSV file has a different name or is located elsewhere, you need to modify the following line in the `enhance_games.py` script accordingly:
 
 ```python
 csv_link = "Game Thumbnail.csv" # Replace with the path to your CSV file if different
 ```
 
-Your CSV file should have at least one column containing the game titles. Ensure that the column name containing the game titles matches how the script accesses it (in this script, it's assumed to be named game_title).
+Your CSV file should have at least one column containing the game titles. Ensure that the column name containing the game titles matches how the script accesses it (in this script, it's assumed to be named `game_title`).
 
 ### 4. Run the Script
 
-Once you have installed all the requirements, configured the API key, and ensured your game data CSV file is ready, you can run the enhance_games.py script. Open your terminal or command prompt, navigate to the directory where you saved the script, and run the following command:  
+Once you have installed all the requirements, configured the API key, and ensured your game data CSV file is ready, you can run the `enhance_games.py` script. Open your terminal or command prompt, navigate to the directory where you saved the script, and run the following command:  
 
 ```bash
 python enhance_games.py
@@ -81,7 +80,7 @@ The script will start processing each game title in the CSV file, sending reques
 
 ### 5. Check the Output
 
-After the script finishes running, the enriched game data will be saved in a new CSV file named enhanced_games.csv (or the name you specified in the output_filepath variable within the script) in the same directory as the script. This file will contain the original columns from your input file, along with new columns for genre, short_description, and player_mode.
+After the script finishes running, the enriched game data will be saved in a new CSV file named `enhanced_games.csv` (or the name you specified in the output_filepath variable within the script) in the same directory as the script. This file will contain the original columns from your input file, along with new columns for genre, short_description, and player_mode.
 Important Notes
 
 - Rate Limits: Be mindful of the Google Gemini API rate limits, especially if you are using the free tier. This script includes a delay (time.sleep(delay)) between API calls to help avoid rate limiting. You can adjust the DELAY_BETWEEN_CALLS value in the script if necessary.
@@ -90,4 +89,4 @@ Important Notes
 - Internet Connection: The script requires an active internet connection to communicate with the Google Gemini API.
 - API Key Security: Keep your API key secure. Never share it publicly or store it directly in source code that is uploaded to public version control systems. Using a config.ini file that is not tracked by Git or environment variables is a more secure approach.
 
-By following these instructions, you should be able to run the enhance_games.py script to enrich your game data using the Google Gemini API.
+By following these instructions, you should be able to run the `enhance_games.py` script to enrich your game data using the Google Gemini API.
