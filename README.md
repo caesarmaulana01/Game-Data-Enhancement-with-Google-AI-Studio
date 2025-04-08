@@ -82,11 +82,11 @@ The script will start processing each game title in the CSV file, sending reques
 
 After the script finishes running, the enriched game data will be saved in a new CSV file named `enhanced_games.csv` (or the name you specified in the output_filepath variable within the script) in the same directory as the script. This file will contain the original columns from your input file, along with new columns for genre, short_description, and player_mode.
 
-**Important Notes**
-- **Rate Limits**: Be mindful of the Google Gemini API rate limits, especially if you are using the free tier. This script includes a delay (time.sleep(delay)) between API calls to help avoid rate limiting. You can adjust the DELAY_BETWEEN_CALLS value in the script if necessary.
-- **API Usage Costs**: Using the Google Gemini API may incur costs depending on your plan and usage. Carefully review the Google AI Studio pricing terms.
-- **Error Handling**: The script includes basic error handling (e.g., if the CSV file is not found or if there's an error calling the API). You might need to enhance the error handling based on your specific needs.
-- Internet Connection: The script requires an active internet connection to communicate with the Google Gemini API.
-- **API Key Security:** Keep your API key secure. Never share it publicly or store it directly in source code that is uploaded to public version control systems. Using environment variables, which are typically not tracked by Git, is a more secure approach to manage your API key. Ensure you set the `GOOGLE_API_KEY` environment variable in a way that is appropriate for your operating system and development environment, and avoid exposing it in your code.
+**Important Notes:**
+* **Rate Limits**: Be mindful of the Google Gemini API rate limits, especially if you are using the free tier. This script includes a delay (time.sleep(delay)) between API calls to help avoid rate limiting. You can adjust the DELAY_BETWEEN_CALLS value in the script if necessary.
+* **API Usage Costs**: Using the Google Gemini API may incur costs depending on your plan and usage. Carefully review the Google AI Studio pricing terms.
+* **Error Handling**: The script includes basic error handling (e.g., if the CSV file is not found or if there's an error calling the API). You might need to enhance the error handling based on your specific needs.
+* Internet Connection: The script requires an active internet connection to communicate with the Google Gemini API.
+* **API Key Security:** Keep your API key secure. Never share it publicly or store it directly in source code that is uploaded to public version control systems. Using environment variables, which are typically not tracked by Git, is a more secure approach to manage your API key. Ensure you set the `GOOGLE_API_KEY` environment variable in a way that is appropriate for your operating system and development environment, and avoid exposing it in your code.
 
 By following these instructions, you should be able to run the `enhance_games.py` script to enrich your game data using the Google Gemini API.
