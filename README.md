@@ -12,7 +12,7 @@ Before running the script, ensure you have the following prerequisites met:
 
 3.  **`requirements.txt` File (If Present):** If your project repository includes a `requirements.txt` file, it contains a list of Python libraries required by the script.
 
-4.  **`config.ini` File (If Using Local Configuration):** If your script is configured to read the API key from a `config.ini` file, you will need to create this file with the correct format.
+4.  **Environment Variable for API Key:** You will need to set the `GOOGLE_API_KEY` environment variable in your operating system with your Google Gemini API key. The script is configured to read the API key from this environment variable.
 
 5.  **Game Data CSV File:** You need a CSV file containing a list of game titles you want to enrich. By default, the script looks for a file named `Game Thumbnail.csv` in the same directory as the script.
 
@@ -87,6 +87,6 @@ Important Notes
 - **API Usage Costs**: Using the Google Gemini API may incur costs depending on your plan and usage. Carefully review the Google AI Studio pricing terms.
 - **Error Handling**: The script includes basic error handling (e.g., if the CSV file is not found or if there's an error calling the API). You might need to enhance the error handling based on your specific needs.
 - Internet Connection: The script requires an active internet connection to communicate with the Google Gemini API.
-- **API Key Security**: Keep your API key secure. Never share it publicly or store it directly in source code that is uploaded to public version control systems. Using a config.ini file that is not tracked by Git or environment variables is a more secure approach.
+- * **API Key Security:** Keep your API key secure. Never share it publicly or store it directly in source code that is uploaded to public version control systems. Using environment variables, which are typically not tracked by Git, is a more secure approach to manage your API key. Ensure you set the `GOOGLE_API_KEY` environment variable in a way that is appropriate for your operating system and development environment, and avoid exposing it in your code.
 
 By following these instructions, you should be able to run the `enhance_games.py` script to enrich your game data using the Google Gemini API.
