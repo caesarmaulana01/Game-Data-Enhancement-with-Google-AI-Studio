@@ -87,6 +87,6 @@ Important Notes
 - **API Usage Costs**: Using the Google Gemini API may incur costs depending on your plan and usage. Carefully review the Google AI Studio pricing terms.
 - **Error Handling**: The script includes basic error handling (e.g., if the CSV file is not found or if there's an error calling the API). You might need to enhance the error handling based on your specific needs.
 - Internet Connection: The script requires an active internet connection to communicate with the Google Gemini API.
-- * **API Key Security:** Keep your API key secure. Never share it publicly or store it directly in source code that is uploaded to public version control systems. Using environment variables, which are typically not tracked by Git, is a more secure approach to manage your API key. Ensure you set the `GOOGLE_API_KEY` environment variable in a way that is appropriate for your operating system and development environment, and avoid exposing it in your code.
+- **API Key Security:** Keep your API key secure. Never share it publicly or store it directly in source code that is uploaded to public version control systems. Using environment variables, which are typically not tracked by Git, is a more secure approach to manage your API key. Ensure you set the `GOOGLE_API_KEY` environment variable in a way that is appropriate for your operating system and development environment, and avoid exposing it in your code.
 
 By following these instructions, you should be able to run the `enhance_games.py` script to enrich your game data using the Google Gemini API.
