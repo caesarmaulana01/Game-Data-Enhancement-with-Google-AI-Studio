@@ -82,7 +82,7 @@ The script will start processing each game title in the CSV file, sending reques
 
 After the script finishes running, the enriched game data will be saved in a new CSV file named `enhanced_games.csv` (or the name you specified in the output_filepath variable within the script) in the same directory as the script. This file will contain the original columns from your input file, along with new columns for genre, short_description, and player_mode.
 
-Important Notes
+**Important Notes**
 - **Rate Limits**: Be mindful of the Google Gemini API rate limits, especially if you are using the free tier. This script includes a delay (time.sleep(delay)) between API calls to help avoid rate limiting. You can adjust the DELAY_BETWEEN_CALLS value in the script if necessary.
 - **API Usage Costs**: Using the Google Gemini API may incur costs depending on your plan and usage. Carefully review the Google AI Studio pricing terms.
 - **Error Handling**: The script includes basic error handling (e.g., if the CSV file is not found or if there's an error calling the API). You might need to enhance the error handling based on your specific needs.
